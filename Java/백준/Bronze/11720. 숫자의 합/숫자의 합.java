@@ -1,24 +1,21 @@
 import java.util.*;
-import java.lang.*;
 import java.io.*;
 
-// The main method must be in a class named "Main".
-class Main {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int a = sc.nextInt();
+public class Main{
+    public static void main(String[] args) throws Exception {
 
-        String num = sc.next();
-        
-            int sum = 0;
-        
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int n = Integer.parseInt(br.readLine());
+        String num = br.readLine();
 
-        for (int i = 0; i < a; i++) {
-        
+        int sum =0;
 
-                sum += num.charAt(i) - '0';
-        }    
+        for (int i=0; i<n; i++) {
+            sum += num.charAt(i)-'0';
+
+            
+        }
             System.out.println(sum);
-        
+            
     }
 }
