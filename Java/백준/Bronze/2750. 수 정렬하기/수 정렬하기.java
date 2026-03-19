@@ -4,31 +4,20 @@ import java.io.*;
 
 // The main method must be in a class named "Main".
 class Main {
-	public static void main(String[] args) {
-    
-		Scanner in = new Scanner(System.in);
-		
-		int N = in.nextInt();
-		int[] arr = new int[N];
-		
-		for(int i = 0; i < N; i++) {
-			arr[i] = in.nextInt();
-		}
- 
-		// Selection sort
-		for(int i = 0; i < N - 1; i++) {
-			for(int j = i + 1; j < N; j++) {
-				if(arr[i] > arr[j]) {
-					int temp = arr[j];
-					arr[j] = arr[i];
-					arr[i] = temp;
-				}
-			}
-		}
-		
-		for(int val : arr) {
-			System.out.println(val);
-		}
- 
-	}
+    public static void main(String[] args) throws Exception{
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int n =Integer.parseInt(br.readLine());
+
+        int[] arr = new int[n];
+
+        for (int i=0; i<n; i++) {
+            arr[i] = Integer.parseInt(br.readLine());
+        }
+
+        Arrays.sort(arr);
+
+        for (int x : arr) {
+        System.out.println(x);
+        }
+    }
 }
